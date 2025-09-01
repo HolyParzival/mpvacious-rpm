@@ -25,8 +25,13 @@ fi
 echo "New $package_name version available: $latest_version"
 echo "Updating $spec and pushing new tag..."
 
-tag="$package_name-$latest_version"
+release=1
+release_string="$release%{?dist}"
+tag="$package_name-$latest_version-$release"
+
 sed -i "/^Version:/ s/$current_version/$latest_version/" "$spec"
+sed -i "s/^\(Release:\s*\).*/\1$release_string/" "$spec"
+
 git diff "$spec"
 git add "$spec"
 git commit -m "Update $package_name to $latest_version"
