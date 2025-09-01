@@ -1,7 +1,7 @@
 %global     debug_package %{nil}
 
 Name:       mpvacious
-Version:    0.39
+Version:    0.40
 Release:    1%{?dist}
 Summary:    Semi-automatic subs2srs for mpv
 
