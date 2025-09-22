@@ -1,6 +1,6 @@
 Name:       mpvacious
-Version:    0.40
-Release:    2%{?dist}
+Version:    0.41
+Release:    1%{?dist}
 Summary:    Adds mpv keybindings to create Anki cards from movies and TV shows
 
 License:    GPL-3.0-or-later
